@@ -18,5 +18,7 @@ for index, row in df.iterrows():
     sql = "INSERT INTO categories (CategoryID, CategoryName, Description) VALUES (%s, %s, %s)"
     val = (row['CategoryID'], row['CategoryName'], row['Description'])
     cursor.execute(sql, val)
-
+    
+# MYSQL Command to create the table insode the databsae 
+# CREATE TABLE categories (CategoryID INT, CategoryName VARCHAR(255), Description VARCHAR(255))"
 mydb.commit()
